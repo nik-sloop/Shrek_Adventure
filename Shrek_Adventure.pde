@@ -1,7 +1,7 @@
 int character = 0; // keeps track of which character is selected
 int stage = 0; // keeps track of which level the player is on
 int level = 1;
-boolean singlePlayer = false;
+boolean singlePlayer = true;
 boolean ready = false;
 
 void setup() {
@@ -17,6 +17,7 @@ void setup() {
     exit();
   }
       // load all the obsticles for each level
+  makeMapArray();
   
   //background(50);
   //drawBackgroundImages();

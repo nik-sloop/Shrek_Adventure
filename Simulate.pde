@@ -1,3 +1,6 @@
+int deathCounter = 3;
+boolean dead = false;
+
 float vx = 0;  // current velocity
 float vy = 0;  // current velocity
 float ax = 0;  // object acceleration
@@ -15,10 +18,24 @@ float donkeyvy = 0;
 
 character[] characters; 
 object[][] obsticles;
-
+boolean reset = false;
 void simulate() {
   if(singlePlayer){
-    characters[character].update(); // update characters position based on the simulation
+    if(reset){
+      deathCounter = 3;
+      level = 1;
+      stage = 0;
+      dead = false;
+      ready = false;
+      reset = false;
+      setup();
+    }
+    if (deathCounter == 0) {    // if player has run out of lives
+      dead = true;
+    }
+    if (dead != true) {
+      characters[character].update(); // update characters position based on the simulation
+    }
   } else {
     characters[0].update();
     characters[1].update();
@@ -60,6 +77,8 @@ void simulate() {
       vx = 0;
       vy = 0;   
       ay = 0;
+      deathCounter--;
+      drawLives(deathCounter);
       //println("VY after falling: " +characters[character].getVY());
     }
     //println(stage);
@@ -168,7 +187,8 @@ void nextstage(){
     level ++;
     stage = 0;
     ready = false;
-    
+  } else if (stage == 99){
+    // call new death end screen function
   }
 }
 // Handles collision detection between the character and other objects.
