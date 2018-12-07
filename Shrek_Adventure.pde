@@ -17,6 +17,7 @@ void setup() {
     exit();
   }
       // load all the obsticles for each level
+  makeMapArray();
   
   //background(50);
   //drawBackgroundImages();

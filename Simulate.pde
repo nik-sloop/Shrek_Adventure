@@ -1,3 +1,6 @@
+int deathCounter = 3;
+boolean dead = false;
+
 float vx = 0;  // current velocity
 float vy = 0;  // current velocity
 float ax = 0;  // object acceleration
@@ -15,10 +18,24 @@ float donkeyvy = 0;
 
 character[] characters; 
 object[][] obsticles;
-
+boolean reset = false;
 void simulate() {
   if(singlePlayer){
-    characters[character].update(); // update characters position based on the simulation
+    if(reset){
+      deathCounter = 3;
+      level = 1;
+      stage = 0;
+      dead = false;
+      ready = false;
+      reset = false;
+      setup();
+    }
+    if (deathCounter == 0) {    // if player has run out of lives
+      dead = true;
+    }
+    if (dead != true) {
+      characters[character].update(); // update characters position based on the simulation
+    }
   } else {
     characters[0].update();
     characters[1].update();
@@ -60,6 +77,8 @@ void simulate() {
       vx = 0;
       vy = 0;   
       ay = 0;
+      deathCounter--;
+      drawLives(deathCounter);
       //println("VY after falling: " +characters[character].getVY());
     }
     //println(stage);
@@ -137,7 +156,7 @@ void simulate() {
         }
         println("VY after falling: " +characters[character].getVY());
       }
-      println(stage);     
+          
       if(characters[i].getypos() > 680 && characters[i].getCharacter() == 0) {
         shrekDeath.play();
         shrekDeath.rewind();
@@ -165,11 +184,13 @@ void nextstage(){
   } else if (stage == 2){
     stage = 3;
   } else if (stage == 3){
-    level ++;
+    if (level == maxLevel){
+      maxLevel++;
+      println("max level: "+maxLevel);
+    }
     stage = 0;
     ready = false;
-    
-  }
+  } 
 }
 // Handles collision detection between the character and other objects.
 void detectObject(){
@@ -247,7 +268,6 @@ int isTouching(character h1, object h2){
     if((h1.getypos() - h2.getypos() <= h2.geth()) && ((h1.getypos()-h2.getypos() > h2.geth()-20))){
       for(int i =0; i < h1.getw(); i++){
           if((h2.getxpos() < (h1.getxpos() + i)) && ((h1.getxpos() +i) <(h2.getxpos()+h2.getw()))){
-            println("0");
             return 0;
           }
       }
@@ -256,7 +276,6 @@ int isTouching(character h1, object h2){
     if(((h2.getypos()-h1.getypos()) <= h1.geth()) && ((h2.getypos()-h1.getypos()) > h1.geth()-20)){
       for(int i =0; i < h1.getw(); i++){
           if((h2.getxpos() < (h1.getxpos() + i)) && ((h1.getxpos() +i) <(h2.getxpos()+h2.getw()))){
-            println("1");
             return 1;
           }
       }
@@ -265,7 +284,6 @@ int isTouching(character h1, object h2){
     if(((h2.getxpos() - h1.getxpos()) <= h1.getw()) && (h2.getxpos() - h1.getxpos()) > h1.getw()-20){
       for(int i =0; i < h1.geth(); i++){     
           if((((h1.getypos() + i)) > h2.getypos()) && (h1.getypos() + i) < h2.getypos() + h2.geth()){
-            println("2");
             return 2;
           }
         }
@@ -274,7 +292,6 @@ int isTouching(character h1, object h2){
     if(((h1.getxpos() - h2.getxpos()) <= h2.getw()) && ((h1.getxpos() - h2.getxpos()) > h2.getw()-20)){
      for(int i =0; i < h1.geth(); i++){    
         if((((h1.getypos() + i)) > h2.getypos()) && (h1.getypos() + i) < h2.getypos() + h2.geth()){
-          println("3");
           return 3;
           }
       }

@@ -6,7 +6,7 @@ boolean[] bothControls = {false, false};
 
 // Is called when a key is pressed
 void keyPressed(){ 
-   if(ready){ 
+   if(ready && !dead){ 
     if(singlePlayer){
       // Moves character left
       if (key == 'a') {
@@ -78,11 +78,43 @@ void keyPressed(){
             characters[1].setVY(-8); // Jump height
         }     
     }
-   } else {
+   } else if(dead){
      if(key == ' '){
-       ready = true;
-       setup();
+       reset = true;
      }
+   }else if(!ready && !dead){
+     if (keyCode == UP) {  // if key is up, check to see if map value is X and greater than 1
+      if (map[playerX][playerY - 1] != 'X' && playerY > 1 && map[playerX][playerY - 1]-48 <= maxLevel) {
+        playerY--;
+      }
+  } else if (keyCode == DOWN) {  // if key is down, check to see if map value is X and less than 18
+      if ((map[playerX][playerY + 1] != 'X' && playerY < 18) && (map[playerX][playerY + 1]-48 <= maxLevel)) {
+        playerY++;
+      }
+  } else if (keyCode == RIGHT) {  // if key is right, check to see if map value is X and less than 18
+      if ((map[playerX + 1][playerY] != 'X' && playerX < 18) && (map[playerX+1][playerY]-48 <= maxLevel)) {
+        playerX++;
+      }
+  } else if (keyCode == LEFT) {  // if key is left, check to see if map value is X and greater than 1
+      if ((map[playerX - 1][playerY] != 'X' && playerX > 1) && (map[playerX-1][playerY]-48 <= maxLevel)) {
+        playerX--;
+      }
+  } else if( keyCode == ENTER){
+    if (map[playerX][playerY] == '1'){
+      level = 1;
+      ready = true;
+      setup();
+    } else if (map[playerX][playerY] == '2'){
+      level = 2;
+      ready = true;
+      setup();
+    }
+    else if (map[playerX][playerY] == '3'){
+      level = 3;
+      ready = true;
+      setup();
+    }
+  }
    }
 }
   
