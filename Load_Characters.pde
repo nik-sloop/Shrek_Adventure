@@ -4,7 +4,7 @@ void loadCharacters(){
      such as the starting location and what sprite to use
      for them.
   */
-  if(singlePlayer){
+  if(singlePlayer == 1){
     characters = new character[2];
     characters[0] = new character(100,400,20,50, vx,vy,0); 
     characters[1] = new character(100,440,25,30, vx,vy,1); 

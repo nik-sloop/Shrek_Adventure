@@ -28,7 +28,7 @@ void render() {
 
 // Draws the appropriate character
 void drawCharacters(){
-  if(singlePlayer){
+  if(singlePlayer == 1){
     if(characters[character].getCharacter() == 0){
         characters[1].d();
     }

@@ -20,7 +20,7 @@ character[] characters;
 object[][] obsticles;
 boolean reset = false;
 void simulate() {
-  if(singlePlayer){
+  if(singlePlayer == 1){
     if(reset){
       deathCounter = 3;
       level = 1;
@@ -45,9 +45,13 @@ void simulate() {
   We got help on lines 10-15 this from site
   https://forum.processing.org/two/discussion/25157/help-with-gravity-and-jumping
   */
-  if(singlePlayer){
-    updateLevel1();
-    updateLevel2();
+  if(singlePlayer == 1){
+    if (level == 1) {
+      updateLevel1();
+    } else if (level == 2) {
+      updateLevel2();
+    }
+    
     ax = 0;
     ax += bothControls[0]?-.1:0;
     ax += bothControls[1]?.1:0;
@@ -61,7 +65,7 @@ void simulate() {
       delay(500);
       nextstage();
     }
-    if (characters[character].getxpos() > 1170 && stage != 3) {   
+    if (characters[character].getxpos() > 1200) { //&& stage != 3) {   
       ax = 0;
       vx =0;
       vy = 0;
@@ -109,9 +113,8 @@ void simulate() {
     }
     detectObject();
   } else {
-    
-    updateLevel1();
-    updateLevel2();
+    //updateLevel1();
+    //updateLevel2();
     
     shrekax = 0;
     shrekax += shrekControl[0]?-.1:0;
@@ -132,12 +135,12 @@ void simulate() {
     characters[1].setVY(donkeyvy);
     
     if(stage == 3){
-      delay(5000);
+      delay(500);
       nextstage();
     }
     
     for(int i = 0; i < characters.length; i++){
-      if (characters[i].getxpos() > 1170 && stage != 3) {   
+      if (characters[i].getxpos() > 1200 && stage != 3) {   
         shrekax = 0;
         shrekvx =0;
         shrekvy = 0;
@@ -187,6 +190,7 @@ void simulate() {
   }
 }
 void nextstage(){
+
   if(stage == 0){
     stage = 1;
   } else if (stage == 1){
@@ -204,7 +208,7 @@ void nextstage(){
 }
 // Handles collision detection between the character and other objects.
 void detectObject(){
-  if(singlePlayer){
+  if(singlePlayer == 1){
     for(int i = 0; i < obsticles[stage].length; i++){
         if(obsticles[stage][i] != null){
           if(isTouching(characters[character],obsticles[stage][i]) == 1){          

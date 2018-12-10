@@ -1,7 +1,7 @@
 int character = 0; // keeps track of which character is selected
 int stage = 0; // keeps track of which level the player is on
 int level = 1;
-boolean singlePlayer = true;
+int singlePlayer = 1;
 boolean ready = false;
 
 void setup() {
@@ -10,7 +10,7 @@ void setup() {
   soundLoader();
   loadCharacters(); // create characters
   if(level == 1){
-    loadLevel2();
+    loadLevel1();
   } else if (level == 2){
     loadLevel2();
   }else if (level == 3){

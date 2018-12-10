@@ -54,15 +54,21 @@ void loadLevel1(){
   obsticles[1][13] = new object(650,270,grassWidth,grassHeight,0,0,0,0,0,0,1); // first grass (layer 2)
   obsticles[1][14] = new object(350,450,grassWidth,grassHeight,0,0,0,0,0,0,1); // first grass (layer 1)
   
-  // level 3
+  //level 3
   obsticles[2][0] = new object(0,530,200,175,0,0,0,0,0,0,0); // ground 1
   obsticles[2][1] = new object(450,530,150,175,0,0,0,0,0,0,0); // ground 2
   obsticles[2][2] = new object(850,530,1200,175,0,0,0,0,0,0,0); // ground 3
   obsticles[2][3] = new object(450,450,grassWidth,grassHeight,0,0,0,0,0,0,1); // first grass
-  obsticles[2][4] = new object(50,450,100,10,0,0,0,1,330,530,0); // first jump
-  obsticles[2][5] = new object(225,130,100,10,0,0,0,1,130,360,0); // second jump
-  obsticles[2][6] = new object(650,530,100,10,1,650,700,1,0,0,0); // second jump x move, x up, x low, y move, y up, y low
-  //obsticles[2][1] = new object(
+  obsticles[2][4] = new object(50,450,100,10,0,0,0,1,330,530,0); // first platform
+  obsticles[2][5] = new object(225,130,100,10,0,0,0,1,130,360,0); // second platform
+  obsticles[2][6] = new object(650,530,100,10,1,650,700,0,0,0,0); // third platform x move, x up, x low, y move, y up, y low
+  obsticles[2][7] = new object(300,500,0,0,0,0,0,0,0,0,7); // text
+  obsticles[2][8] = new object(870,450,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass bottom
+  obsticles[2][9] = new object(870,400,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass middle second
+  obsticles[2][10] = new object(870,350,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass middle first
+  obsticles[2][11] = new object(870,300,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass first
+  obsticles[2][12] = new object(870,250,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); // third grass first
+  obsticles[2][13] = new object(300,950,0,0,0,0,0,0,0,0,8); // get over here
   
   // level 4
   obsticles[3][0] = new object(0,530,1200,175,0,0,0,0,0,0,0); // ground 1

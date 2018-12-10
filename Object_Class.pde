@@ -94,7 +94,7 @@
       //fill(255);
       noFill();
       noStroke();
-      rect(xpos,ypos,wid,hei);
+      rect(xpos,ypos,wid - 5,hei);
       scale(.125);
       image(grass,(xpos*8)-200,(ypos*8)-310);
       scale(8);
@@ -175,6 +175,15 @@
       text("A = Left", 150, 200);
       text("D = Right", 150, 250);
       text("Spacebar = JUMP", 150, 300);
+    }
+    if(obsticle == 13){
+      fill(255);
+      noFill();
+      noStroke();
+      rect(xpos,ypos,wid,hei);
+      scale(.05);
+      image(collectwaffles,(xpos*20)-175,(ypos*20)-400);
+      scale(20);
     }
   }
 }

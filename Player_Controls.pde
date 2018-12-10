@@ -7,7 +7,7 @@ boolean[] bothControls = {false, false};
 // Is called when a key is pressed
 void keyPressed(){ 
    if(ready && !dead){ 
-    if(singlePlayer){
+    if(singlePlayer == 1){
       // Moves character left
       if (key == 'a') {
         bothControls[0] = true;
@@ -110,7 +110,7 @@ void keyPressed(){
       setup();
     }
     else if (map[playerX][playerY] == '3'){
-      level = 3;
+            level = 2;
       ready = true;
       setup();
     }
@@ -120,7 +120,7 @@ void keyPressed(){
   
 // Is called when a key is released 
 void keyReleased(){
-  if(singlePlayer){
+  if(singlePlayer == 1){
     if (key == 'a') { // Stops the character from moving
       bothControls[0] = false;
       vx = 0;

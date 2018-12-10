@@ -21,6 +21,8 @@ PImage outhouse;
 PImage backgroundtree;
 PImage button;
 
+PImage collectwaffles;
+
 PImage startscreen;
 
 
@@ -53,6 +55,7 @@ void image_Loader() {
   donkeyStill = donkeyRight;
   startscreen = loadImage("Images/Miscellaneous/ShrekTitleScreen.png");
   
+  collectwaffles = loadImage("Images/Objects/wafflecollectible.png");
 
   outhouse = loadImage("Images/Miscellaneous/outhouse.png"); 
   menu = loadImage("Images/Miscellaneous/ShrekTitleScreen.png");

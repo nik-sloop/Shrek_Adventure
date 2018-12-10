@@ -1,5 +1,5 @@
 
-int maxLevel = 1;
+int maxLevel = 5;
 String mapString = "XXXXX" +
                    "X1XXX" +
                    "X2 3X" +
