@@ -134,6 +134,47 @@
       scale(.25);
       image(menu,(xpos*20)-175,(ypos*20)-400);
       scale(20);
-    }    
+    }
+    if(obsticle == 6){
+      fill(255);
+      textSize(100);
+      text("TO BE CONTINUED....", 150, 100);
+      textSize(30);
+      text("Press Esc to Exit", (xpos*20)-175,(ypos*20)-400);
+    }
+    if(obsticle == 7){
+      fill(255);
+      textSize(19);
+      text("Get over here", 1070, 400);
+    }
+    if(obsticle == 8){
+      fill(255);
+      textSize(65);
+      text("SKILL LEVEL 99999 MODE", 210, 60);
+    }
+    if(obsticle == 9){
+      fill(255);
+      textSize(85);
+      text("Level 1", 460, 100);
+    }
+    if(obsticle == 10){
+      fill(255);
+      textSize(80);
+      text("Level 2", 455, 70);
+    }
+    if(obsticle == 11){
+      fill(255);
+      textSize(63);
+      text("Level 3", 455, 65);
+    }
+    if(obsticle == 12){
+      fill(255);
+      textSize(20);
+      text("Donkey can jump higher than Shrek and fit through tight area.",150, 100);
+      text("E = change Character", 150, 150);
+      text("A = Left", 150, 200);
+      text("D = Right", 150, 250);
+      text("Spacebar = JUMP", 150, 300);
+    }
   }
 }

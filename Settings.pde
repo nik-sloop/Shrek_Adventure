@@ -18,7 +18,7 @@ void mousePressed(){
   if(mouseX >= 20 && mouseX <= 50 && mouseY >= 20 && mouseY <= 50){
     settings = true;
   }
-  if(mouseX >= 145 && mouseX <= 245 && mouseY >= 200 && mouseY <= 240 && settings){
+  if(mouseX >= 140 && mouseX <= 245 && mouseY >= 200 && mouseY <= 240 && settings){ //background Volume Up
     isMute();
     if(volume >= 10){
       volume = 10;
@@ -28,7 +28,7 @@ void mousePressed(){
       }
       volumeGain = volume;
   }
-  if(mouseX >= 255 && mouseX <= 355 && mouseY >= 200 && mouseY <= 250 && settings){
+  if(mouseX >= 260 && mouseX <= 355 && mouseY >= 200 && mouseY <= 250 && settings){ //background Volume Down
     isMute();
     if(volume <= -55){
     volume = -55;
@@ -38,13 +38,13 @@ void mousePressed(){
     }
     volumeGain = volume;
 }
-if(mouseX >= 200 && mouseX <= 300 && mouseY >= 300 && mouseY <= 350 && settings){
+if(mouseX >= 200 && mouseX <= 300 && mouseY >= 300 && mouseY <= 350 && settings){ //background mute
   volume = volumeMute;
   isMute = true;
   
 }
-if(mouseX >= 845 && mouseX <= 945 && mouseY >= 200 && mouseY <= 250 && settings){
-    eisMute();
+if(mouseX >= 840 && mouseX <= 945 && mouseY >= 200 && mouseY <= 250 && settings){ //effect Volume Up
+    eisMute(); 
     if(evolume >= 10){
       evolume = 10;
     }
@@ -55,7 +55,7 @@ if(mouseX >= 845 && mouseX <= 945 && mouseY >= 200 && mouseY <= 250 && settings)
       }
       evolumeGain = evolume;
   }
-  if(mouseX >= 955 && mouseX <= 1055 && mouseY >= 200 && mouseY <= 250 && settings){
+  if(mouseX >= 960 && mouseX <= 1055 && mouseY >= 200 && mouseY <= 250 && settings){ //effect Volume Down
     eisMute();
     if(evolume <= -55){
     evolume = -55;
@@ -67,17 +67,17 @@ if(mouseX >= 845 && mouseX <= 945 && mouseY >= 200 && mouseY <= 250 && settings)
     }
     evolumeGain = evolume;
 }
-if(mouseX >= 900 && mouseX <= 1000 && mouseY >= 300 && mouseY <= 350 && settings){
+if(mouseX >= 900 && mouseX <= 1000 && mouseY >= 300 && mouseY <= 350 && settings){ //effect mute
   evolume = evolumeMute;
   eisMute = true;
   
 }
 
-if(settings && mouseX >= 400 && mouseX <= 550 && mouseY >= 500 && mouseY <= 575){
+if(settings && mouseX >= 400 && mouseX <= 550 && mouseY >= 500 && mouseY <= 575){ //Resume
   settings = false;
 }
 
-if(settings && mouseX >= 650 && mouseX <= 800 && mouseY >= 500 && mouseY <= 575){
+if(settings && mouseX >= 650 && mouseX <= 800 && mouseY >= 500 && mouseY <= 575){ //Quit 
   exit();
 }
 
@@ -100,12 +100,12 @@ void soundSettings(){
   rect(200, 300, 100, 50); //background mute
   rect(900, 300, 100, 50); //effect mute
   fill(0, 250, 0);
-  rect(145, 200, 100, 50); //background Volume Up
-  rect(845, 200, 100, 50); //effect Volume Up
+  rect(140, 200, 110, 50); //background Volume Up
+  rect(840, 200, 110, 50); //effect Volume Up
   rect(400, 500, 150, 75); //Resume
   fill(250, 0, 0);
-  rect(255, 200, 100, 50); //background Volume Down
-  rect(955, 200, 100, 50); //effect Volume Down
+  rect(260, 200, 110, 50); //background Volume Down
+  rect(960, 200, 110, 50); //effect Volume Down
   rect(650, 500, 150, 75); //Quit
   fill(255);
   textSize(15);
@@ -113,13 +113,13 @@ void soundSettings(){
   text("Mute", 930, 330);
   text("Volume Up", 155, 230);
   text("Volume Up", 855, 230);
-  text("Volume Down", 255, 230);
-  text("Volume Down", 955, 230);
+  text("Volume Down", 265, 230);
+  text("Volume Down", 965, 230);
   textSize(30);
-  text("Background Music", 125, 30);
-  text("Sound Effects", 850, 30);
+  text("Background Music", 125, 150);
+  text("Sound Effects", 850, 150);
   text("Resume", 415, 545);
-  text("Quit", 685, 545);
+  text("Quit", 690, 545);
 }
 
 //if the mute button is activated, pressing the volume button will

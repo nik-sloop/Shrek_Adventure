@@ -17,7 +17,7 @@ float donkeyvx = 0;
 float donkeyvy = 0;
 
 character[] characters; 
-object[][] obsticles;
+object[][][] obsticles;
 boolean reset = false;
 void simulate() {
   if(singlePlayer){
@@ -47,6 +47,7 @@ void simulate() {
   */
   if(singlePlayer){
     updateLevel1();
+    updateLevel2();
     ax = 0;
     ax += bothControls[0]?-.1:0;
     ax += bothControls[1]?.1:0;
@@ -72,8 +73,16 @@ void simulate() {
       characters[1].setypos(500);
     }
     if (characters[character].getypos() > 780) { 
-      characters[character].setypos(490);
-      characters[character].setxpos(150);
+    //  if (stage == 1){ //replaced to level 2, which is no. 1
+    //    shrekCharacters[character].setypos(400);
+    //    shrekCharacters[character].setxpos(100);
+    //    vy = 0;   
+    //    ay = 0;
+    //    deathCounter--;
+    //    drawLives(deathCounter);
+    //} else {
+      characters[character].setypos(400); //490
+      characters[character].setxpos(100); //150
       vx = 0;
       vy = 0;   
       ay = 0;
@@ -102,6 +111,7 @@ void simulate() {
   } else {
     
     updateLevel1();
+    updateLevel2();
     
     shrekax = 0;
     shrekax += shrekControl[0]?-.1:0;
