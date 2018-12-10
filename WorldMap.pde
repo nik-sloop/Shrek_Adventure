@@ -1,10 +1,11 @@
 
 int maxLevel = 1;
-String mapString = "XXXXX" +
-                   "X1XXX" +
-                   "X2 3X" +
-                   "XXX4X" +
-                   "XXXXX";
+String mapString = "XXXXXX" +
+                   "X1002X" +
+                   "XX4X0X" +
+                   "XX003X" +
+                   "XXXXXX" +
+                   "XXXXXX" ;
 
 int N = int(sqrt(mapString.length()));
 char[][] map = new char[N][N];
@@ -24,15 +25,14 @@ void worldMap(){
   background(255);
   fill(255);
   strokeWeight(0);
-  drawMap();
-  drawRect();
+  drawMap(); 
+  background(255);
+  background(worldMap);
+  drawShrek();
   // draw minimap with rectangle tracking player progress through maze 
   
 }
-void drawShrek(){
-  
-}
-void drawRect() {  // draws rectangle in minimap which tracks players progress through the maze
+void drawShrek() {  // draws rectangle in minimap which tracks players progress through the maze
   
   translate(animatedPlayerX, animatedPlayerY);
   //fill(189, 61, 58);
@@ -52,7 +52,8 @@ void makeMapArray() {  // maps values to two dimensional array
 }
 
 void drawMap() {  // draws map
-  
+  noFill();
+  noStroke();
   for (int y = 0; y < N; y++)
     for (int x = 0; x < N; x++)
       if (map[x][y] == 'X')
