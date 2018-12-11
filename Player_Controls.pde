@@ -21,7 +21,7 @@ void keyPressed(){
           Checks to see which character is selected
           and then applies the correct jump height.
       */
-      if (key == ' ' && vy == 0 ){ // Causes the charcter to jump
+      if (key == 'w' && vy == 0 ){ // Causes the charcter to jump
           if(character == 0){
             vy = -6; // Prevents the character from jumping in air
             characters[character].setVY(-6); // Jump height

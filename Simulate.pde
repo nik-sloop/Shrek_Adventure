@@ -49,13 +49,14 @@ void simulate() {
     
     if (level == 1) {
       updateLevel1();
-    } 
+    }
     else if (level == 2) {
       updateLevel2();
     } 
-    
-  
-    
+    else if (level == 3) {
+      updateLevel3();
+    } 
+
     ax = 0;
     ax += bothControls[0]?-.1:0;
     ax += bothControls[1]?.1:0;
@@ -75,22 +76,14 @@ void simulate() {
       vy = 0;
       nextstage();
       
-      characters[0].setxpos(110);
-      characters[0].setypos(480);  
-      characters[1].setxpos(110);
-      characters[1].setypos(500);
+      characters[0].setxpos(100);
+      characters[0].setypos(400);  
+      characters[1].setxpos(100);
+      characters[1].setypos(400);
     }
     if (characters[character].getypos() > 780) { 
-    //  if (stage == 1){ //replaced to level 2, which is no. 1
-    //    shrekCharacters[character].setypos(400);
-    //    shrekCharacters[character].setxpos(100);
-    //    vy = 0;   
-    //    ay = 0;
-    //    deathCounter--;
-    //    drawLives(deathCounter);
-    //} else {
-      characters[character].setypos(400); //490
-      characters[character].setxpos(100); //150
+      characters[character].setypos(400); 
+      characters[character].setxpos(100); 
       vx = 0;
       vy = 0;   
       ay = 0;
@@ -121,9 +114,13 @@ void simulate() {
     
     if (level == 1) {
       updateLevel1();
-    } else if (level == 2) {
-      updateLevel2();
     }
+    else if (level == 2) {
+      updateLevel2();
+    } 
+    else if (level == 3) {
+      updateLevel3();
+    } 
     shrekax = 0;
     shrekax += shrekControl[0]?-.1:0;
     shrekax += shrekControl[1]?.1:0;
@@ -187,12 +184,13 @@ void simulate() {
        donkeyDeath.rewind();
       }
     }
-    for(int j=0; j <= obsticles[stage].length; j++){
+    for(int j=0; j <= obsticles[stage].length - 1; j++){
         if(obsticles[stage][j] != null){
           obsticles[stage][j].update();
-        } else {
-         break; 
-       }
+        } 
+       // else {
+       //  break; 
+       //}
     }
     detectObject();
   }

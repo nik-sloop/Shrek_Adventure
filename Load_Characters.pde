@@ -7,11 +7,11 @@ void loadCharacters(){
   if(singlePlayer == 1){
     characters = new character[2];
     characters[0] = new character(100,400,20,50, vx,vy,0); 
-    characters[1] = new character(100,440,25,30, vx,vy,1); 
+    characters[1] = new character(100,400,25,30, vx,vy,1); 
   } else {
     print("test");
     characters = new character[2];
     characters[0] = new character(100,400,20,50, shrekvx,shrekvy,0); 
-    characters[1] = new character(100,440,25,30, donkeyvx,donkeyvy,1);
+    characters[1] = new character(100,400,25,30, donkeyvx,donkeyvy,1);
   }
 }

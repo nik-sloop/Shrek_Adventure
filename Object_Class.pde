@@ -155,17 +155,17 @@
     if(obsticle == 9){
       fill(255);
       textSize(85);
-      text("Level 1", 460, 100);
+      text("Stage 1", 460, 100);
     }
     if(obsticle == 10){
       fill(255);
       textSize(80);
-      text("Level 2", 455, 70);
+      text("Stage 2", 455, 70);
     }
     if(obsticle == 11){
       fill(255);
       textSize(63);
-      text("Level 3", 455, 65);
+      text("Stage 3", 455, 65);
     }
     if(obsticle == 12){
       fill(255);
@@ -174,7 +174,7 @@
       text("E = change Character", 150, 150);
       text("A = Left", 150, 200);
       text("D = Right", 150, 250);
-      text("Spacebar = JUMP", 150, 300);
+      text("W = JUMP", 150, 300);
     }
     if(obsticle == 13){
       fill(255);
