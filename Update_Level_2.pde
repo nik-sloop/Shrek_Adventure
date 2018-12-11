@@ -1,6 +1,6 @@
 void updateLevel2(){    
-
-  //Level 1
+///////obstical parameters: (xPosition, Yposition, Width, Height, xMovement, xUpperLimit, xLowerLimit, yMovement, yUpperLimit, yLowerLimit, obstical type)////////
+  //Stage 1
   if(isTouching(characters[0],obsticles[0][20]) == 1 || isTouching(characters[1],obsticles[0][20]) == 1){  //first waffle
           obsticles[0][20] = null; 
           number_of_waffles = number_of_waffles + 1;
@@ -10,10 +10,10 @@ void updateLevel2(){
         number_of_waffles = number_of_waffles + 1;
     } 
     
-    //Level 2
+    //Stage 2
   if(isTouching(characters[0],obsticles[1][30]) == 1 || isTouching(characters[1],obsticles[1][30]) == 1 || 
   isTouching(characters[0],obsticles[1][31]) == 1 || isTouching(characters[1],obsticles[1][31]) == 1){
-          obsticles[1][9] = new object(340,380,100,10,0,0,0,1,530,380,0); // second platform with button (not fixed)
+          obsticles[1][9] = new object(340,380,100,10,0,0,0,1,370,530,0); // second platform with button (not fixed)
       } else {
           obsticles[1][9] = null; // second platform with button (not fixed)
       }
@@ -39,7 +39,7 @@ void updateLevel2(){
         number_of_waffles = number_of_waffles + 1;
       }
   
-  //Level 3
+  //Stage 3
       if(isTouching(characters[0],obsticles[2][39]) == 1 || isTouching(characters[1],obsticles[2][39]) == 1 || 
   isTouching(characters[0],obsticles[2][40]) == 1 || isTouching(characters[1],obsticles[2][40]) == 1){
           obsticles[2][26] = new object(340,380,100,10,0,0,0,1,530,380,0); // second platform with button (not fixed)

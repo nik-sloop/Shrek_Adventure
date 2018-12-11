@@ -46,11 +46,15 @@ void simulate() {
   https://forum.processing.org/two/discussion/25157/help-with-gravity-and-jumping
   */
   if(singlePlayer == 1){
+    
     if (level == 1) {
       updateLevel1();
-    } else if (level == 2) {
+    } 
+    else if (level == 2) {
       updateLevel2();
-    }
+    } 
+    
+  
     
     ax = 0;
     ax += bothControls[0]?-.1:0;
@@ -95,12 +99,13 @@ void simulate() {
       //println("VY after falling: " +characters[character].getVY());
     }
     //println(stage);
-    for(int i=0; i <= obsticles[stage].length; i++){
+    for(int i=0; i <= obsticles[stage].length-1; i++){
       if(obsticles[stage][i] != null){
         obsticles[stage][i].update();
-      } else {
-       break; 
-      }
+      } 
+      //else {
+      // break; 
+      //}
     } 
     
     if(characters[character].getypos() > 680 && character == 0) {
@@ -113,9 +118,12 @@ void simulate() {
     }
     detectObject();
   } else {
-    //updateLevel1();
-    //updateLevel2();
     
+    if (level == 1) {
+      updateLevel1();
+    } else if (level == 2) {
+      updateLevel2();
+    }
     shrekax = 0;
     shrekax += shrekControl[0]?-.1:0;
     shrekax += shrekControl[1]?.1:0;
