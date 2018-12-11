@@ -26,7 +26,7 @@ void loadLevel2(){
   obsticles[0][4] = new object(500,400,grassWidth,grassHeight,0,0,0,0,0,0,1); // second grass top
   obsticles[0][5] = new object(950,0,250,500,0,0,0,0,0,0,0); // first box
   obsticles[0][6] = new object(350,450,grassWidth,grassHeight,0,0,0,0,0,0,1); // first grass
-  obsticles[0][7] = new object(200,475,logWidth,logHeight,0,0,0,0,0,0,3); // first log
+  obsticles[0][7] = new object(200,470,logWidth,logHeight,0,0,0,0,0,0,3); // first log
   obsticles[0][8] = new object(500,450,grassWidth,grassHeight,0,0,0,0,0,0,1); // second grass bottom
   obsticles[0][9] = new object(800,450,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass bottom
   obsticles[0][10] = new object(800,400,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass middle
@@ -84,6 +84,7 @@ void loadLevel2(){
   obsticles[3][0] = new object(0,530,1200,175,0,0,0,0,0,0,0); // ground 1
   obsticles[3][1] = new object(1175,170,25,580,0,0,0,0,0,0,0); // wall right
   obsticles[3][2] = new object(0,170,25,580,0,0,0,0,0,0,0); // wall left
+  obsticles[3][3] = new object(100,100,0,0,0,0,0,0,0,0,20); // Conclusion
   
   //// Menu
   //obsticles[1][3][0] = new object(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4);

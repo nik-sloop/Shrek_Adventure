@@ -28,6 +28,13 @@ void worldMap(){
   drawMap(); 
   background(255);
   background(worldMap);
+  fill(255);
+  rect(.12, .12, .20, .28);
+  fill(0);
+  textSize(.5);
+  text("Use arrow keys", .5, 4.3);
+  text("and Enter at the red dots", .45, 4.5);
+  fill(255);
   drawShrek();
   // draw minimap with rectangle tracking player progress through maze 
   
@@ -35,13 +42,11 @@ void worldMap(){
 void drawShrek(){
   
   translate(animatedPlayerX, animatedPlayerY);
-  //fill(189, 61, 58);
-  //rect(.2,.3,.48,.4);
+  fill(189, 61, 58);
+  rect(.2,.3,.48,.4);
   scale(.1);
   image(shrekRight,4,3,3,3);
   image(donkeyRight,2,3,3,3);
-  //fill(255);
-  //rect(20, 20, 30, 30);
   
 }
 

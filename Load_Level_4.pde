@@ -22,6 +22,7 @@ void loadLevel4(){
   obsticles[0][0] = new object(0,530,1200,175,0,0,0,0,0,0,0); // ground 1
   obsticles[0][1] = new object(1175,170,25,580,0,0,0,0,0,0,0); // wall right
   obsticles[0][2] = new object(0,170,25,580,0,0,0,0,0,0,0); // wall left
+  obsticles[0][3] = new object(100,100,0,0,0,0,0,0,0,0,22); // Conclusion
   
   //// Menu
   //obsticles[1][3][0] = new object(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4);
