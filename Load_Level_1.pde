@@ -46,6 +46,7 @@ void loadLevel1(){
   obsticles[1][16] = new object(100,100,0,0,0,0,0,0,0,0,14); // instructions
   obsticles[1][17] = new object(100,100,0,0,0,0,0,0,0,0,16); // your heath
   obsticles[1][18] = new object(100,100,0,0,0,0,0,0,0,0,17); // settings
+  obsticles[1][19] = new object(100,100,0,0,0,0,0,0,0,0,23); // waffles
   
   // level 3 (Donkey practice)
   obsticles[2][0] = new object(0,530,1200,175,0,0,0,0,0,0,0); // ground 1

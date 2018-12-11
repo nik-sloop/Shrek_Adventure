@@ -38,7 +38,7 @@ void loadLevel3(){
   obsticles[0][2] = new object(850,530,200,175,0,0,0,0,0,0,0); // ground 3
   obsticles[0][3] = new object(1100,0,100,370,0,0,0,0,0,0,0); // wall
   obsticles[0][4] = new object(250,470,100,10,0,0,0,0,0,0,0); // first platform
-  obsticles[0][5] = new object(650,470,50,10,0,0,0,1,400,470,0); // second platform
+  obsticles[0][5] = new object(650,470,50,10,0,0,0,1,400,500,0); // second platform
   obsticles[0][6] = new object(750,470,80,10,0,0,0,0,0,0,0); // third platform
   obsticles[0][7] = new object(1100,470,110,10,0,0,0,0,0,0,0); // fourth platform
   obsticles[0][8] = new object(750,370,80,10,0,0,0,0,0,0,0); // donkey first platform

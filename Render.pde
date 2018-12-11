@@ -12,12 +12,13 @@ void render() {
     drawObsticles();
     drawCharacters();
     drawLives(deathCounter);
+    drawWaffles();
   } else if (dead == true) {       // if player has run out of lives, draw game over screen
     textSize(100);
     text("GAME OVER", 300, 400);
     fill(138, 7, 7);
     //delay(5000);
-    
+  
   }
   
   fill(255);
@@ -72,4 +73,15 @@ void drawLives(int x){
     y += 1000;
     scale(20);
   }
+}
+
+void drawWaffles(){
+  int y = 10750;
+  String waffles_collection = Integer.toString(number_of_waffles); 
+    scale(.05);
+    image(collectwaffles, 1000, 10750);
+    textSize(950);
+    text("x", 1200, 12450);
+    text(waffles_collection, 1200, 13550);
+    scale(20);
 }

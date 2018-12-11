@@ -271,6 +271,11 @@
       text("You have finished the game.", 220, 170);
       text("Congratulations!!", 220, 200); 
     }
+    if(obsticle == 23){
+      fill(255);
+      textSize(23);
+      text("<---------Your very own waffle collection.", 120, 610);
+    }
     
   }
 }
