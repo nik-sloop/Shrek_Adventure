@@ -76,7 +76,8 @@ class character {
         noStroke();
         rect(xpos,ypos,wid,hei); // Creates a hit box around the character
         scale(.05);
-        image(shrekRight,(xpos*20)-300,(ypos*20)); // Sets starting position and sprite
+        image(shrekRightMoving[(frameCount/5)%5],(xpos*20)-300,(ypos*20)); // Sets starting position and sprite
+        //image(shrekRight,(xpos*20)-300,(ypos*20)); // Sets starting position and sprite
         scale(20);
         shrekStill = shrekRight;
       }
@@ -85,7 +86,8 @@ class character {
         noStroke();
         rect(xpos,ypos,wid,hei); // Creates a hit box around the character
         scale(.05);
-        image(shrekLeft,(xpos*20)-300,(ypos*20)); // Sets starting position and sprite
+        image(shrekLeftMoving[(frameCount/5)%5],(xpos*20)-300,(ypos*20)); // Sets starting position and sprite
+        //image(shrekLeft,(xpos*20)-300,(ypos*20)); // Sets starting position and sprite
         scale(20);
         shrekStill = shrekLeft;
       }
@@ -116,7 +118,8 @@ class character {
         noStroke();
         rect(xpos,ypos,wid,hei); // Creates a hit box around the character
         scale(.05);
-        image(donkeyLeft,(xpos*20)-150,(ypos*20)-330); // Sets starting position and sprite
+        image(donkeyLeftMoving[(frameCount/5)%6],(xpos*20)-150,(ypos*20)-330); // Sets starting position and sprite
+        //image(donkeyLeft,(xpos*20)-150,(ypos*20)-330); // Sets starting position and sprite
         scale(20);
         donkeyStill = donkeyLeft;
       }
