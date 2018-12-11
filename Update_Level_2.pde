@@ -18,4 +18,8 @@ void updateLevel2(){
       obsticles[1][19] = null; // first jump
       pressed = true;
     }
+    if(isTouching(characters[0],obsticles[2][12]) == 1 || isTouching(characters[1],obsticles[2][12]) == 1){    // waffle
+      obsticles[2][12] = null; 
+      number_of_waffles = number_of_waffles + 1;
+  }
 }

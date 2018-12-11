@@ -4,6 +4,8 @@ boolean[] shrekControl = { false, false};
 boolean[] donkeyControl = { false, false};
 boolean[] bothControls = {false, false};
 
+boolean jumptutorial = false;
+
 // Is called when a key is pressed
 void keyPressed(){ 
    if(ready && !dead){ 
@@ -25,10 +27,12 @@ void keyPressed(){
           if(character == 0){
             vy = -6; // Prevents the character from jumping in air
             characters[character].setVY(-6); // Jump height
+            jumptutorial = true;
           }
           if(character == 1){
             vy = -8; // Prevents the character from jumping in air
             characters[character].setVY(-8); // Jump height 
+            jumptutorial = true;
           }
         }    
       if(key == 'e' && vy == 0){ // Switches between characters.
@@ -60,6 +64,7 @@ void keyPressed(){
       if (key == 'w' && shrekvy == 0 ){ // Causes the charcter to jump
             shrekvy = -6; // Prevents the character from jumping in air
             characters[0].setVY(-6); // Jump height
+            jumptutorial = true;
         }    
       for(int i = 0; i < obsticles[stage].length; i++){
         if(key == 'f' && (isTouching(characters[0],obsticles[stage][i]) == 2 ||isTouching(characters[0],obsticles[stage][i]) == 3) && obsticles[stage][i].getBreakable()){
@@ -110,7 +115,12 @@ void keyPressed(){
       setup();
     }
     else if (map[playerX][playerY] == '3'){
-            level = 2;
+      level = 3;
+      ready = true;
+      setup();
+    }
+    else if (map[playerX][playerY] == '4'){
+      level = 4;
       ready = true;
       setup();
     }

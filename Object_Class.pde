@@ -169,12 +169,16 @@
     }
     if(obsticle == 12){
       fill(255);
+      textSize(40);
+      text("Welcome to the Shrek game.",370, 50);
       textSize(20);
-      text("Donkey can jump higher than Shrek and fit through tight area.",150, 100);
-      text("E = change Character", 150, 150);
+      text("The purpose of the game is to reach the end.",150, 100);
+      text("E = Change Character", 150, 150);
       text("A = Left", 150, 200);
       text("D = Right", 150, 250);
       text("W = JUMP", 150, 300);
+      text("There are some things that you need to know. Go to the right.", 150, 350);
+      text("------------->", 600, 380);
     }
     if(obsticle == 13){
       fill(255);
@@ -185,5 +189,70 @@
       image(collectwaffles,(xpos*20)-175,(ypos*20)-400);
       scale(20);
     }
+    if(obsticle == 14){
+      fill(255);
+      textSize(40);
+      text("First, lets use only Shrek.",250, 130);
+      textSize(25);
+      text("He can't jump over it",250, 155);
+      text("Press F", 250, 180);
+      
+      if (obsticles[1][2] == null) {
+      text("Shrek can one-punch grass and other things.", 250, 230);
+      text("Remember to use your punches wisely.", 250, 255);
+      text("Now punch your way to the end---->", 250, 280);
+      }
+    }
+    if(obsticle == 15){
+      fill(255);
+      textSize(23);
+      text("Stand on the button.",360, 270);
+      text("|",458, 300);
+      text("|",458, 320);
+      text("V",455, 340);      
+    }
+    if(obsticle == 16){
+      fill(255);
+      textSize(23);
+      text("Your Health.",0, 340);
+      textSize(17);
+      fill(255);
+      text("|",19, 370);
+      text("|",19, 390);
+      text("|",19, 410);
+      text("|",19, 430);
+      text("|",19, 450);
+      text("|",19, 470);
+      text("|",19, 490);
+      text("|",19, 510);
+      textSize(23);
+      text("V",15, 530);      
+    }
+    if(obsticle == 17){
+      fill(255);
+      textSize(23);
+      text("<-------- Settings", 50, 40);    
+    }
+    if(obsticle == 18){
+      fill(255);
+      textSize(40);
+      text("Now, use only Donkey.",50, 130);
+      textSize(25);
+      text("Press W", 50, 160);
+      
+      if (jumptutorial) {
+      text("Unlike Shrek, he can go jump higher", 50, 205);
+      text("and fit through small areas.", 50, 230);
+      text("Now jump and squeeze your way to the end---->", 50, 255);
+      text("And remember to take waffles.      |", 50, 280);
+      text("                                                     V", 49, 300);
+      }
+    }
+    if(obsticle == 19){
+      fill(255);
+      textSize(45);
+      text("Now you are ready to play the game.", 220, 200);   
+    }
+    
   }
 }

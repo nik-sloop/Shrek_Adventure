@@ -1,8 +1,9 @@
 int character = 0; // keeps track of which character is selected
-int stage = 0; // keeps track of which level the player is on
-int level = 2;
+int stage = 2; // keeps track of which level the player is on
+int level = 1;
 int singlePlayer = 1;
 boolean ready = false;
+boolean pressed;
 
 void setup() {
   size(1200, 700); // set scree size
@@ -16,7 +17,7 @@ void setup() {
   }else if (level == 3){
     loadLevel3();
   }else if (level == 4){
-    //loadllevel4();
+    loadLevel4();
   }
       // load all the obsticles for each level
   makeMapArray();

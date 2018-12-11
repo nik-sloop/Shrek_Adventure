@@ -67,7 +67,7 @@ void simulate() {
     characters[character].setVY(vy);
     
     if(stage == 3){
-      delay(500);
+      delay(5000);
       nextstage();
     }
     if (characters[character].getxpos() > 1200) { //&& stage != 3) {   
@@ -140,7 +140,7 @@ void simulate() {
     characters[1].setVY(donkeyvy);
     
     if(stage == 3){
-      delay(500);
+      delay(5000);
       nextstage();
     }
     

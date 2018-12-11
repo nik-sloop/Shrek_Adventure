@@ -34,15 +34,16 @@ void loadLevel2(){
   obsticles[0][12] = new object(0,0,250,450,0,0,0,0,0,0,0); // wall
   obsticles[0][13] = new object(450,505, buttonWidth, buttonHeight,0,0,0,0,0,0,4); // button
   obsticles[0][14] = new object(100,100,0,0,0,0,0,0,0,0,9); // Stage 1
+  obsticles[0][15] = new object(100,100,0,0,0,0,0,0,0,0,15); // Stand on the button
 
   //obsticles[0][11] = new object(150,450,rockWidth,rockHeight,0,0,0,0,0,0,2); //rock
   
   
   // level 2
-  obsticles[1][0] = new object(0,530,800,175,0,0,0,0,0,0,0); // ground 1 (layer 1)
+  obsticles[1][0] = new object(0,530,680,175,0,0,0,0,0,0,0); // ground 1 (layer 1)
   obsticles[1][1] = new object(25,270,rockWidth,rockHeight,0,0,0,0,0,0,2); //rock
   obsticles[1][2] = new object(135,295,logWidth,logHeight,0,0,0,0,0,0,3); //third log
-  obsticles[1][3] = new object(0,350,500,25,0,0,0,0,0,0,0); // ground 1 (layer 2)
+  obsticles[1][3] = new object(0,350,400,25,0,0,0,0,0,0,0); // ground 1 (layer 2)
   obsticles[1][4] = new object(600,350,475,25,0,0,0,0,0,0,0); // ground 2 (layer 2)
   obsticles[1][5] = new object(1175,170,25,580,0,0,0,0,0,0,0); // wall right
   obsticles[1][6] = new object(900,530,300,175,0,0,0,0,0,0,0); // ground 2 (layer 1)
@@ -75,7 +76,7 @@ void loadLevel2(){
   obsticles[2][9] = new object(870,400,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass middle second
   obsticles[2][10] = new object(870,350,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass middle first
   obsticles[2][11] = new object(870,300,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass first
-  obsticles[2][12] = new object(870,250,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); // third grass first
+  obsticles[2][12] = new object(870,250,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); // waffle
   //obsticles[2][13] = new object(300,950,0,0,0,0,0,0,0,0,8); // Skill level
   obsticles[2][14] = new object(100,100,0,0,0,0,0,0,0,0,11); // Stage 3
   
