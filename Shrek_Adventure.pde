@@ -10,7 +10,7 @@ void setup() {
   soundLoader();
   loadCharacters(); // create characters
   if(level == 1){
-    loadLevel2();
+    loadLevel1();
   } else if (level == 2){
     loadLevel2();
   }else if (level == 3){

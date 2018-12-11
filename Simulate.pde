@@ -17,7 +17,7 @@ float donkeyvx = 0;
 float donkeyvy = 0;
 
 character[] characters; 
-object[][][] obsticles;
+object[][] obsticles;
 boolean reset = false;
 void simulate() {
   if(singlePlayer){
