@@ -18,8 +18,7 @@ void render() {
     fill(138, 7, 7);
     //delay(5000);
     
-  }
-  
+  } 
   fill(255);
   rect(20, 20, 30, 30);
   

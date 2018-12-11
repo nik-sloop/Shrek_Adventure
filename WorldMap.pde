@@ -26,6 +26,8 @@ void worldMap(){
   fill(255);
   strokeWeight(0);
   drawMap(); 
+  fill(255);
+  rect(0,0, 3, 3);
   background(255);
   background(worldMap);
   drawShrek();
