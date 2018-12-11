@@ -23,7 +23,7 @@ PImage button;
 
 PImage startscreen;
 
-
+PImage worldMap;
 
 PImage menu;
 
@@ -57,4 +57,7 @@ void image_Loader() {
   outhouse = loadImage("Images/Miscellaneous/outhouse.png"); 
   menu = loadImage("Images/Miscellaneous/ShrekTitleScreen.png");
   button = loadImage("Images/Objects/button.png");
+  
+  worldMap = loadImage("Images/Miscellaneous/shrekmap.png");
+  worldMap.resize(width,height);
 }
