@@ -263,7 +263,7 @@
     if(obsticle == 21){
       fill(255);
       textSize(45);
-      text("You finished Level 2. Now go to Final Level.", 220, 200);   
+      text("You finished Level 2. Now lets go and see the surprise(s).", 200, 200);   
     }
     if(obsticle == 22){
       fill(255);

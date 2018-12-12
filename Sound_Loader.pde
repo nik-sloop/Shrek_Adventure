@@ -6,6 +6,7 @@ AudioPlayer waffles; // Donkey's catchphrase
 AudioPlayer shrekDeath; //Shrek's audio when he dies
 AudioPlayer donkeyDeath; //Donkey's audio when he dies
 Minim minim;
+
 void soundLoader(){
   // Starts all of the music
   minim = new Minim(this);

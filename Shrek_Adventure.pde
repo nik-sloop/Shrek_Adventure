@@ -4,14 +4,18 @@ int level = 1;
 int singlePlayer = 1;
 boolean ready = false;
 boolean pressed;
+int startUp = 0;
 
 int number_of_waffles;
 
 void setup() {
+  if(startUp == 0){
+    soundLoader();
+  }
+  
   size(1200, 700); // set scree size
   //fullScreen();
   image_Loader();  // load all of the needed images
-  soundLoader();
   loadCharacters(); // create characters
   if(level == 1){
     loadLevel1();
