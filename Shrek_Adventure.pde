@@ -3,11 +3,14 @@ int stage = 0; // keeps track of which level the player is on
 int level = 1;
 boolean singlePlayer = true;
 boolean ready = false;
+int startUp = 0;
 
 void setup() {
+  if(startUp == 0){
+    soundLoader();
+  }
   size(1200, 700); // set scree size
   image_Loader();  // load all of the needed images
-  soundLoader();
   loadCharacters(); // create characters
   if(level == 1){
     loadLevel1();

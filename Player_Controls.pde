@@ -101,16 +101,36 @@ void keyPressed(){
       }
   } else if( keyCode == ENTER){
     if (map[playerX][playerY] == '1'){
+      if(startUp == 0){
+        startUp = 1;
+      }
+      if(startUp == 1){
       level = 1;
       ready = true;
       setup();
+      }
     } else if (map[playerX][playerY] == '2'){
+      if(startUp == 0){
+        startUp = 1;
+      }
+      if(startUp == 1){
       level = 2;
       ready = true;
       setup();
+      }
     }
     else if (map[playerX][playerY] == '3'){
+      if(startUp == 0){
+        startUp = 1;
+      }
+      if(startUp == 1){
       level = 3;
+      ready = true;
+      setup();
+      }
+    }
+    else if (map[playerX][playerY] == '4'){
+      level = 4;
       ready = true;
       setup();
     }
