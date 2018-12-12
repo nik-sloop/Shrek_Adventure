@@ -1,6 +1,6 @@
 int character = 0; // keeps track of which character is selected
-int stage = 2; // keeps track of which level the player is on
-int level = 2;
+int stage = 1; // keeps track of which level the player is on
+int level = 3;
 int singlePlayer = 1;
 boolean ready = false;
 boolean pressed;
@@ -16,7 +16,7 @@ void setup() {
     loadLevel1();
   } else if (level == 2){
     loadLevel2();
-  }else if (level == 3){
+  } else if (level == 3){
     loadLevel3();
   }else if (level == 4){
     loadLevel4();

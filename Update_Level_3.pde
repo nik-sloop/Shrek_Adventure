@@ -11,16 +11,27 @@ void updateLevel3(){
     } 
     
     //Stage 2
-  if(isTouching(characters[0],obsticles[1][30]) == 1 || isTouching(characters[1],obsticles[1][30]) == 1 || 
-  isTouching(characters[0],obsticles[1][31]) == 1 || isTouching(characters[1],obsticles[1][31]) == 1){
+  if(isTouching(characters[0],obsticles[1][30]) == 1 || isTouching(characters[1],obsticles[1][30]) == 1){
     if (pressed) {
-          obsticles[1][9] = new object(340,380,100,10,0,0,0,1,380,530,0); // second platform with button (not fixed)
+          obsticles[1][9] = new object(340,390,100,10,0,0,0,1,380,530,0); // second platform with button (not fixed)
           pressed = false;
     }
-      } else {
-          obsticles[1][9] = null; // second platform with button (not fixed)
-          pressed = true;
-      }
+      } 
+      //else {
+      //    obsticles[1][9] = null; // second platform with button (not fixed)
+      //    pressed = true;
+      //}
+  if(isTouching(characters[0],obsticles[1][31]) == 1 || isTouching(characters[1],obsticles[1][31]) == 1){
+    if (pressed) {
+          obsticles[1][39] = new object(310,290,30,10,0,0,0,1,380,530,0); // second platform with button (not fixed)
+          pressed = false;
+    }
+      } 
+      //else {
+      //    obsticles[1][39] = null; // second platform with button (not fixed)
+      //    pressed = true;
+      //}
+      
       if(isTouching(characters[0],obsticles[1][32]) == 1 || isTouching(characters[1],obsticles[1][32]) == 1){
           obsticles[1][6] = null; // third wall 
       } else {
@@ -30,8 +41,8 @@ void updateLevel3(){
           obsticles[1][33] = null; 
           number_of_waffles = number_of_waffles + 1;
       }
-      if(isTouching(characters[0],obsticles[1][34]) == 1 || isTouching(characters[1],obsticles[1][34]) == 1){  //second waffle
-        obsticles[1][34] = null; 
+      if(isTouching(characters[0],obsticles[1][38]) == 1 || isTouching(characters[1],obsticles[1][38]) == 1){  //second waffle
+        obsticles[1][38] = null; 
         number_of_waffles = number_of_waffles + 1;
       }   
       if(isTouching(characters[0],obsticles[1][35]) == 1 || isTouching(characters[1],obsticles[1][35]) == 1){  //third waffle
