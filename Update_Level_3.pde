@@ -58,7 +58,7 @@ void updateLevel3(){
   //if(isTouching(characters[0],obsticles[2][39]) == 1 || isTouching(characters[1],obsticles[2][39]) == 1 || 
   //isTouching(characters[0],obsticles[2][40]) == 1 || isTouching(characters[1],obsticles[2][40]) == 1){
     
-  if{isTouching(characters[0],obsticles[2][40]) == 1 || isTouching(characters[1],obsticles[2][40]) == 1){
+  if(isTouching(characters[0],obsticles[2][40]) == 1 || isTouching(characters[1],obsticles[2][40]) == 1){
     if (pressed) {
           obsticles[2][48] = new object(510,450,30,10,0,0,0,0,0,0,0); //cancel
           pressed = false;

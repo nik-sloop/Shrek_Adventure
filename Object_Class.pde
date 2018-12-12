@@ -269,9 +269,10 @@
       fill(255);
       textSize(45);
       text("You have finished the game.", 220, 170);
-      text("Congratulations!!", 320, 220); 
+      text("You have found Fiona.", 220, 220); 
+      text("Congratulations!!", 320, 270); 
       textSize(23);
-      text("( Further levels will be added soon....)", 270, 270); 
+      text("( Further levels will be added soon....)", 270, 320); 
     }
     if(obsticle == 23){
       fill(255);
