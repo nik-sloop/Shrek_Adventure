@@ -1,5 +1,5 @@
 
-int maxLevel = 2;
+int maxLevel = 1;
 String mapString = "XXXXXX" +
                    "X1002X" +
                    "XX4X0X" +
@@ -44,8 +44,8 @@ void worldMap(){
 void drawShrek(){
   
   translate(animatedPlayerX, animatedPlayerY);
-  fill(189, 61, 58);
-  rect(.2,.3,.48,.4);
+  //fill(189, 61, 58);
+  //rect(.2,.3,.48,.4);
   scale(.1);
   image(shrekRight,4,3,3,3);
   image(donkeyRight,2,3,3,3);

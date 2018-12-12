@@ -13,7 +13,7 @@ void setup() {
     soundLoader();
   }
   
-  size(1200, 700); // set scree size
+  size(1200, 700); // set screen size
   //fullScreen();
   image_Loader();  // load all of the needed images
   loadCharacters(); // create characters
