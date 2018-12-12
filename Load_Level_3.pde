@@ -19,7 +19,7 @@ void loadLevel3(){
   ///////obstical parameters: (xPosition, Yposition, Width, Height, xMovement, xUpperLimit, xLowerLimit, yMovement, yUpperLimit, yLowerLimit, obstical type)////////
   
   // Creates a multi-dimensional array with three levels and all the objects in those levels
-  obsticles = new object[5][55];
+  obsticles = new object[5][60];
   
   //Shrek platform height = 60, (log 470)
   //Donkey platform height = 100, (log 430),jump range x length= 200
@@ -116,27 +116,27 @@ void loadLevel3(){
   obsticles[2][16] = new object(220,50,20,10,0,0,0,0,0,0,0); //donkey fifth platform
   obsticles[2][17] = new object(0,80,20,10,0,0,0,0,0,0,0); //donkey sixth platform
   obsticles[2][18] = new object(600,580,30,10,0,0,0,0,0,0,0); // donkey seventh platform
-  obsticles[2][19] = new object(520,690,20,10,0,0,0,0,0,0,0); // donkey eighth platform
+
   obsticles[2][20] = new object(650,550,20,10,0,0,0,0,0,0,0); // donkey nineth platform
   obsticles[2][21] = new object(1160,390,20,10,0,0,0,0,0,0,0); // donkey tenth platform
   obsticles[2][22] = new object(1000,290,20,10,0,0,0,0,0,0,0); // donkey eleventh platform
   obsticles[2][23] = new object(1160,190,20,10,0,0,0,0,0,0,0); // donkey twelveth platform
   obsticles[2][24] = new object(1000,90,20,10,0,0,0,0,0,0,0); // donkey thirteenth platform
   obsticles[2][25] = new object(150,530,70,10,1,150,330,0,0,0,0); // platform 
-  //obsticles[2][26] = new object(520,530,60,10,0,0,0,0,0,0,0); //second platform 
+  obsticles[2][26] = new object(520,530,80,10,0,0,0,0,0,0,0); //second platform 
   obsticles[2][27] = new object(420,380,20,10,0,0,0,0,0,0,0); //third platform 
   obsticles[2][28] = new object(580,230,80,20,0,0,0,0,0,0,0); //fourth platform
   obsticles[2][29] = new object(660,230,50,10,0,0,0,1,230,430,0); //fifth platform 
-  //obsticles[2][30] = new object(760,230,50,10,0,0,0,1,230,80,0); //sixth platform (not moving)
+  //obsticles[2][51] = new object(760,230,50,10,0,0,0,1,230,80,0); //sixth platform (not moving)
   obsticles[2][31] = new object(750,430,150,15,0,0,0,0,0,0,0); // seventh platform
   obsticles[2][32] = new object(900,495,120,15,0,0,0,0,0,0,0); // eighth platform
-  obsticles[2][33] = new object(410,450,grassWidth,grassHeight,0,0,0,0,0,0,1); // grass
+  obsticles[2][33] = new object(420,450,grassWidth,grassHeight,0,0,0,0,0,0,1); // grass
   obsticles[2][34] = new object(600,150,grassWidth,grassHeight,0,0,0,0,0,0,1); //second grass
   obsticles[2][35] = new object(600,100,grassWidth,grassHeight,0,0,0,0,0,0,1); //second middle grass
   obsticles[2][36] = new object(960,420,grassWidth,grassHeight,0,0,0,0,0,0,1); //third grass
   obsticles[2][37] = new object(1150,530,grassWidth,grassHeight,0,0,0,0,0,0,1); //fourth grass
   obsticles[2][38] = new object(100,100,0,0,0,0,0,0,0,0,11); //Stage 3
-  obsticles[2][39] = new object(460,500,buttonWidth,buttonHeight,0,0,0,0,0,0,4); // button
+  //obsticles[2][39] = new object(460,500,buttonWidth,buttonHeight,0,0,0,0,0,0,4); // button
   obsticles[2][40] = new object(580,200,buttonWidth,buttonHeight,0,0,0,0,0,0,4); //button 
   obsticles[2][41] = new object(860,400,buttonWidth,buttonHeight,0,0,0,0,0,0,4); //button 
   obsticles[2][42] = new object(220, 30,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); // waffle 
@@ -145,9 +145,14 @@ void loadLevel3(){
   obsticles[2][45] = new object(650,530,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); //waffle 
   obsticles[2][46] = new object(980,70,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); //waffle 
   obsticles[2][47] = new object(480,310,30,10,0,0,0,0,0,0,0); //cancel
-  obsticles[2][48] = new object(520,450,30,10,0,0,0,0,0,0,0); //cancel
+  //obsticles[2][48] = new object(510,450,30,10,0,0,0,0,0,0,0); //cancel
   obsticles[2][49] = new object(550,250,30,10,0,0,0,0,0,0,0); //cancel
   obsticles[2][50] = new object(520,670,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); //cancel
+  //obsticles[2][52] = new object(740,180,50,10,0,0,0,0,0,0,0); // stairs
+  //obsticles[2][53] = new object(640,130,50,10,0,0,0,0,0,0,0); //stairs
+  obsticles[2][54] = new object(600,50,grassWidth,grassHeight,0,0,0,0,0,0,1); //second middle grass
+  //obsticles[2][55] = new object(740,200,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); //waffle
+  
   
    // level 4
   obsticles[3][0] = new object(0,530,1200,175,0,0,0,0,0,0,0); // ground 1

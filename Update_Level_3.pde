@@ -12,25 +12,25 @@ void updateLevel3(){
     
     //Stage 2
   if(isTouching(characters[0],obsticles[1][30]) == 1 || isTouching(characters[1],obsticles[1][30]) == 1){
-    if (pressed) {
-          obsticles[1][9] = new object(340,390,100,10,0,0,0,1,380,530,0); // second platform with button (not fixed)
+    //if (pressed) {
+          obsticles[1][9] = new object(340,390,100,10,0,0,0,0,0,0,0); // second platform with button (not fixed)
           pressed = false;
-    }
-      } 
+    //}
+      //} 
       //else {
       //    obsticles[1][9] = null; // second platform with button (not fixed)
       //    pressed = true;
-      //}
+      }
   if(isTouching(characters[0],obsticles[1][31]) == 1 || isTouching(characters[1],obsticles[1][31]) == 1){
-    if (pressed) {
-          obsticles[1][39] = new object(310,290,30,10,0,0,0,1,380,530,0); // second platform with button (not fixed)
+    //if (pressed) {
+          obsticles[1][39] = new object(310,450,30,10,0,0,0,0,0,0,0); // second platform with button (not fixed)
           pressed = false;
-    }
-      } 
-      //else {
-      //    obsticles[1][39] = null; // second platform with button (not fixed)
-      //    pressed = true;
-      //}
+    //}
+    //  } 
+    //  else {
+    //      obsticles[1][39] = null; // second platform with button (not fixed)
+    //      pressed = true;
+      }
       
       if(isTouching(characters[0],obsticles[1][32]) == 1 || isTouching(characters[1],obsticles[1][32]) == 1){
           obsticles[1][6] = null; // third wall 
@@ -55,23 +55,31 @@ void updateLevel3(){
       }
   
   //Stage 3
-      if(isTouching(characters[0],obsticles[2][39]) == 1 || isTouching(characters[1],obsticles[2][39]) == 1 || 
-  isTouching(characters[0],obsticles[2][40]) == 1 || isTouching(characters[1],obsticles[2][40]) == 1){
+  //if(isTouching(characters[0],obsticles[2][39]) == 1 || isTouching(characters[1],obsticles[2][39]) == 1 || 
+  //isTouching(characters[0],obsticles[2][40]) == 1 || isTouching(characters[1],obsticles[2][40]) == 1){
+    
+  if{isTouching(characters[0],obsticles[2][40]) == 1 || isTouching(characters[1],obsticles[2][40]) == 1){
     if (pressed) {
-          obsticles[2][26] = new object(520,530,80,10,0,0,0,1,380,550,0); // second platform with button (not fixed)
+          obsticles[2][48] = new object(510,450,30,10,0,0,0,0,0,0,0); //cancel
           pressed = false;
     }
       } else {
-          obsticles[2][26] = null; // second platform with button (not fixed)
+          obsticles[2][48] = null; // cancel
           pressed = true;
       }
       if(isTouching(characters[0],obsticles[2][41]) == 1 || isTouching(characters[1],obsticles[2][41]) == 1){
         if (pressed) {
-          obsticles[2][30] = new object(740,230,50,10,0,0,0,1,80,230,0); //sixth platform (not moving)
+          //obsticles[2][51] = new object(740,230,50,10,0,0,0,1,80,230,0); //sixth platform (not moving)
+          obsticles[2][52] = new object(740,170,50,10,0,0,0,0,0,0,0); // stairs
+          obsticles[2][53] = new object(640,130,50,10,0,0,0,0,0,0,0); //stairs
+          //obsticles[2][55] = new object(740,210,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); //waffle
           pressed = false;
         }
       } else {
-          obsticles[2][30] = null; // sixth platform (not moving)
+          //obsticles[2][51] = null; // sixth platform (not moving)
+          obsticles[2][52] = null;
+          obsticles[2][53] = null;
+          //obsticles[2][55] = null;
           pressed = true;
       }
       if(isTouching(characters[0],obsticles[2][42]) == 1 || isTouching(characters[1],obsticles[2][42]) == 1){  // first waffle
@@ -94,10 +102,15 @@ void updateLevel3(){
         obsticles[2][46] = null; 
         number_of_waffles = number_of_waffles + 1;
       }
-      if(isTouching(characters[0],obsticles[2][50]) == 1 || isTouching(characters[1],obsticles[2][50]) == 1){  // fifth waffle
+      if(isTouching(characters[0],obsticles[2][50]) == 1 || isTouching(characters[1],obsticles[2][50]) == 1){  // sixth waffle
         obsticles[2][50] = null; 
         number_of_waffles = number_of_waffles + 1;
       }
+      if(isTouching(characters[0],obsticles[2][55]) == 1 || isTouching(characters[1],obsticles[2][55]) == 1){  // seventh waffle
+        obsticles[2][55] = null; 
+        number_of_waffles = number_of_waffles + 1;
+      }
+    
     
     
 }

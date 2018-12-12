@@ -263,13 +263,15 @@
     if(obsticle == 21){
       fill(255);
       textSize(45);
-      text("You finished Level 2. Now go to Level 3.", 220, 200);   
+      text("You finished Level 2. Now go to Final Level.", 220, 200);   
     }
     if(obsticle == 22){
       fill(255);
       textSize(45);
       text("You have finished the game.", 220, 170);
-      text("Congratulations!!", 220, 200); 
+      text("Congratulations!!", 320, 220); 
+      textSize(23);
+      text("( Further levels will be added soon....)", 270, 270); 
     }
     if(obsticle == 23){
       fill(255);
