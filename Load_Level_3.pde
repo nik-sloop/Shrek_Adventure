@@ -136,7 +136,7 @@ void loadLevel3(){
   obsticles[2][36] = new object(960,420,grassWidth,grassHeight,0,0,0,0,0,0,1); //third grass
   obsticles[2][37] = new object(1150,530,grassWidth,grassHeight,0,0,0,0,0,0,1); //fourth grass
   obsticles[2][38] = new object(100,100,0,0,0,0,0,0,0,0,11); //Stage 3
-  //obsticles[2][39] = new object(460,500,buttonWidth,buttonHeight,0,0,0,0,0,0,4); // button
+  obsticles[2][39] = new object(460,500,logWidth,logHeight,0,0,0,0,0,0,3); // log
   obsticles[2][40] = new object(580,200,buttonWidth,buttonHeight,0,0,0,0,0,0,4); //button 
   obsticles[2][41] = new object(860,400,buttonWidth,buttonHeight,0,0,0,0,0,0,4); //button 
   obsticles[2][42] = new object(220, 30,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); // waffle 

@@ -1,6 +1,6 @@
 int character = 0; // keeps track of which character is selected
-int stage = 2; // keeps track of which level the player is on
-int level = 4;
+int stage = 0; // keeps track of which level the player is on
+int level = 1;
 int singlePlayer = 1;
 boolean ready = false;
 boolean pressed;
@@ -9,6 +9,7 @@ int number_of_waffles;
 
 void setup() {
   size(1200, 700); // set scree size
+  //fullScreen();
   image_Loader();  // load all of the needed images
   soundLoader();
   loadCharacters(); // create characters

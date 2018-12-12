@@ -169,8 +169,8 @@
     }
     if(obsticle == 12){
       fill(255);
-      textSize(40);
-      text("Welcome to the Shrek game.",370, 50);
+      textSize(43);
+      text("Welcome to the Shrek game.",320, 50);
       textSize(20);
       text("The purpose of the game is to reach the end.",150, 100);
       text("E = Change Character", 150, 150);
@@ -269,15 +269,24 @@
       fill(255);
       textSize(45);
       text("You have finished the game.", 220, 170);
-      text("You have found Fiona.", 220, 220); 
-      text("Congratulations!!", 320, 270); 
+      text("You have found Fionas.", 270, 220); 
+      text("Congratulations!!", 340, 270); 
       textSize(23);
-      text("( Further levels will be added soon....)", 270, 320); 
+      text("( Further levels will be added soon....)", 310, 320); 
     }
     if(obsticle == 23){
       fill(255);
       textSize(23);
       text("<---------Your very own waffle collection.", 120, 610);
+    }
+    if(obsticle == 24){
+      fill(255);
+      noFill();
+      noStroke();
+      rect(xpos,ypos,wid,hei);
+      scale(.05);
+      image(Fiona,(xpos*20)-175,(ypos*20)-1000);
+      scale(20);
     }
     
   }

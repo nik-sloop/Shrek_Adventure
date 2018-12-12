@@ -23,6 +23,7 @@ void render() {
   
   fill(255);
   rect(20, 20, 30, 30);
+  image(image_settings, 20, 20, 30, 30);
   
 }
 

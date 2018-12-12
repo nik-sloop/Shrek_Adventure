@@ -23,10 +23,12 @@ PImage swampwater;
 PImage outhouse;
 PImage backgroundtree;
 PImage button;
-
+PImage Fiona;
 PImage collectwaffles;
 
 PImage startscreen;
+
+PImage image_settings;
 
 PImage worldMap;
 
@@ -43,6 +45,9 @@ void image_Loader() {
   swampwater = loadImage("Images/Miscellaneous/swampwater.png");
   outhouse = loadImage("Images/Miscellaneous/outhouse.png");
   backgroundtree = loadImage("Images/Miscellaneous/backgroundtree.png");
+  Fiona = loadImage("Images/Fiona/fiona.png");
+  
+  image_settings = loadImage("Images/Miscellaneous/settings.png");
   
   donkeyLeft = loadImage("Images/Donkey/DonkeyIdleLeft.png");
   donkeyRight = loadImage("Images/Donkey/DonkeySpriteIdle2.png");

@@ -30,6 +30,8 @@ void worldMap(){
   background(worldMap);
   fill(255);
   rect(.12, .12, .20, .28);
+  image(image_settings, .12, .12, .20, .28);
+
   fill(0);
   textSize(.5);
   text("Use arrow keys", .5, 4.3);

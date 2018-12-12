@@ -78,7 +78,7 @@ void loadLevel2(){
   obsticles[2][11] = new object(870,300,grassWidth,grassHeight,0,0,0,0,0,0,1); // third grass first
   obsticles[2][12] = new object(870,250,wafflesWidth,wafflesHeight,0,0,0,0,0,0,13); // waffle
   //obsticles[2][13] = new object(300,950,0,0,0,0,0,0,0,0,8); // Skill level
-  obsticles[2][14] = new object(100,100,0,0,0,0,0,0,0,0,11); // Stage 3
+  obsticles[2][13] = new object(100,100,0,0,0,0,0,0,0,0,11); // Stage 3
   
   // level 4
   obsticles[3][0] = new object(0,530,1200,175,0,0,0,0,0,0,0); // ground 1
