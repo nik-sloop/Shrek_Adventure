@@ -9,7 +9,7 @@ String mapString = "XXXXXX" +
 
 int N = int(sqrt(mapString.length()));
 char[][] map = new char[N][N];
-int playerX = 1;                    // tracks players x location, starting with their initial x
+int playerX = 1;                    // tracks players x location, starting with their initial x 
 int playerY = 1;                    // tracks players y location, starting with their initial y
 float animatedPlayerX = playerX;    // tracks players x location with motion
 float animatedPlayerY = playerY;    // tracks player y location with motion
